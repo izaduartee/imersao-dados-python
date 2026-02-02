@@ -11,10 +11,9 @@ st.set_page_config(
     page_icon="📊",
     layout="wide"
 )
-
 # carregamento de dados
 df = pd.read_csv(
-    r"C:\Users\Izabe\PycharmProjects\imersaoDados\dados-imersao-final.csv")
+    "dados-imersao-final.csv")
 
 # barra lateral (filtros)
 st.sidebar.header("🔍 Filtros")
@@ -51,7 +50,7 @@ st.title("🎲 Dashboard de Análise de Salários na Área de Dados")
 st.markdown(
     "Explore os dados salariais na área de dados nos últimos anos. Utilize os filtros à esquerda para refinar a sua análise.")
 
-# métricas principais (kpi)
+# métricas principais (KPI´S)
 st.subheader("Métricas gerais (Salário anual em USD)")
 
 if not df_filtrado.empty:
@@ -73,7 +72,7 @@ col4.metric("Cargo mais frequente", cargo_mais_frequente)
 
 st.markdown("---")
 
-# analises visuais com plotly
+# análises visuais com plotly
 st.subheader("Gráficos")
 
 col_graf1, col_graf2 = st.columns(2)
